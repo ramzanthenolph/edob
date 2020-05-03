@@ -13,8 +13,9 @@
             <P>Most people do know when their birthdays are, but some might not know what day of the week they were born.</P>
             <p>Luckily EDOBAN is here. EDOBAN is a website application that calculates the exact day of the week you were born. To make it more interesting it generates your <b>Akan name</b> </p>
             <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day-name' which corresponds to the day of the week they were born. </p>
-
-            
+        <div class="row">
+        <div class="col-md-6">
+        <div class="jumbotron">    
         <form name="fillForm">    
             
             <div class="form-group">
@@ -47,14 +48,29 @@
             <div>
                 
 
-                <button onclick="function edoban()">SUBMIT</button>
+                <input  type="button" onclick="calculate();" value="submit">
             </div>
             <div>
             <input type="reset">
             </div>
+            
         </form>
-        <a id="myLink" title="Click to do something"
-        href="#" onclick="edoban();return false;">show name</a>
+        </div>
+    </div>
+        <div class="col-md-6">
+            <h3>Here is a cheat sheet</h3>
+            <p>The number tells you the number to the day you are born</p>
+            <p>
+                0: Sunday<br>
+                1: Monday<br>
+                2: Tuesday<br>
+                3: Wednesday<br>
+                4: Thursday<br>
+                5: Friday<br>
+                6: Saturday<br>
+            </p>
+        </div>
+        </div>
         </div>
     </body>
 </html>

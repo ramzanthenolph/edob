@@ -4,7 +4,7 @@
         <title>EDOBAN</title>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 
-        <script src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
     </head>
     <body>
         <div class="container">
@@ -15,25 +15,25 @@
             <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day-name' which corresponds to the day of the week they were born. </p>
 
             
-            
+        <form name="fillForm">    
             
             <div class="form-group">
                 <label for="Year">Date</label>
-                <input type="text" class="form-control" id="date" placeholder="eg.30" min="1" max="31" required>
+                <input type="text" name="date" class="form-control" id="date" placeholder="eg.30" min="1" max="31" required>
             </div>
             <div class="form-group">
                 <label for="month">month</label>
-                <input type="number" class="form-control" id="month" placeholder="eg.2" min="1" max="12" required>  
+                <input type="number" name="month"  class="form-control" id="month" placeholder="eg.2" min="1" max="12" required>  
             </div>
 
             <div class="form-group">
                 <label for="Year">Year</label>
-                <input type="year" class="form-control" id="year" placeholder="eg.2010" required>
+                <input type="year" name="year" class="form-control" id="year" placeholder="eg.96" required>
             </div>
 
             <div class="form-group">
                 <label for="Century">Century</label>
-                <input type="text" class="form-control" id="century" placeholder="eg.20" required>
+                <input type="text" name="century" class="form-control" id="century" placeholder="eg.20" required>
             </div>
 
 
@@ -45,15 +45,16 @@
                 <label for="female">Female</label>
             </div>
             <div>
-                <button onclick="result();">Submit</button>
-
                 
+
+                <button onclick="function edoban()">SUBMIT</button>
             </div>
             <div>
             <input type="reset">
             </div>
         </form>
-    
+        <a id="myLink" title="Click to do something"
+        href="#" onclick="edoban();return false;">show name</a>
         </div>
     </body>
 </html>

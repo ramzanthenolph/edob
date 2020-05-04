@@ -95,65 +95,31 @@ function edoban(){
         yearcode = Math.trunc(yearcode);
         if(year % 4 ==0){
             var dayOfTheWeek= (yearcode + mm(monthCode) + cc(centurycode) + date - 1) % 7;
-            alert( dayOfTheWeek);
+            return dayOfTheWeek;
         }
         else{
             dayOfTheWeek= (yearcode + mm(monthCode) + cc(centurycode) + date )% 7;
-            alert( dayOfTheWeek);
+            return dayOfTheWeek;
         }
     }
     
-    function getGender(dayOfTheWeek){
+    function getGender(){
         var gdr = document.getElementById("gender").value;
      //Try get document by name.same name for each gender
     if(gdr[0].checked == true){
-        if( calculate(dayOfTheWeek)==0){
-            console.log("Your name is Kwasi");
-        }
-        else if(calculate(dayOfTheWeek) ==1){
-            console.log("Your name is Kwadwo");
-        }
-        else if(calculate(dayOfTheWeek) ==2){
-            console.log("Your name is Kwabena");
-        }
-        else if(calculate(dayOfTheWeek) == 3){
-            console.log("Your name is Kwaku");
-        }
-        else if(calculate(dayOfTheWeek) == 4){
-            console.log("Your name is Yam");
-        }
-        else if(calculate(dayOfTheWeek) == 5){
-            console.log("Your name is Kofi");
-        }
-        else{
-            console.log("Your name is kwame");
-        }
+        var gen= 0;
+        return gen;
+        
     }
     else if(gdr[1].checked == true ){
-        if(calculate(dayOfTheWeek)==0){
-            console.log("Your name is Akasua");
-        }
-        else if(calculate(dayOfTheWeek) ==1){
-            console.log("Your name is Adwa");
-        }
-        else if(calculate(dayOfTheWeek) ==2){
-            console.log("Your name is Abenna");
-        }
-        else if(calculate(dayOfTheWeek) == 3){
-            console.log("Your name is Akua");
-        }
-        else if(dayOfTheWeek == 4){
-            console.log("Your name is Afua");
-        }
-        else if(dayOfTheWeek == 5){
-            console.log("Your name is Afua");
-        }
-        else{
-            console.log("Your name is Ama");
-        }
+        gen = 1;
+        return gen;
     }
     else {
         alert("Input gender");
     }
+    }
+    function akanNames(dayOfTheWeek, gen){
+        var maleNames = ["Kwasi", "Kwadwo", ""]
     }
     

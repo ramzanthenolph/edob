@@ -84,29 +84,26 @@
     }
 
     
-     function calculate (date, yearcode, monthCode, centurycode, year){
+     function calculate (date, yearcode, monthCode, centurycode, year, gdr, gender){
         var date = parseInt(document.getElementById("date").value);
         var year = parseInt(document.getElementById("year").value);
         var yearcode = (year + (year/4))% 7;
         yearcode = Math.trunc(yearcode);
 
-        if(year % 4 == 0){
-            var dayOfTheWeek = (yearcode + mm(monthCode) + cc(centurycode) + date - 1) % 7;
-            return dayOfTheWeek;
-            
-        }
-        else if(year % 4!= 0){
-            dayOfTheWeek= (yearcode + mm(monthCode) + cc(centurycode) + date )% 7;
-            return dayOfTheWeek
-        }
-        else{}
+        var gdr = document.getElementsByName("one").value;
+        var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+        var femaleNames = ["Akasua", "Adwa", "Abenna", "Akua", "Yaa", "Afua", "Ama"];
+    /*
+    if(year % 4 == 0){
+        var dayOfTheWeek = (yearcode + mm(monthCode) + cc(centurycode) + date - 1) % 7;
+        
+        
     }
-
-var checkgender = function(){
-    calculate();
-    var gdr = document.getElementsByName("one").value;
-    var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-    var femaleNames = ["Akasua", "Adwa", "Abenna", "Akua", "Yaa", "Afua", "Ama"];
+    else if(year % 4!= 0){
+        dayOfTheWeek= (yearcode + mm(monthCode) + cc(centurycode) + date )% 7;
+        
+    }
+    else{}*/
 
     if(gdr[0].checked == true){
         gender = "male";
@@ -119,8 +116,22 @@ var checkgender = function(){
 
     switch(gender){
         case "male":
-            console.log("Your Akan name is" +maleNames[dayOfTheWeek]);
-    }
+             var dayOfTheWeek= (yearcode + mm(monthCode) + cc(centurycode) + date )% 7;
+            alert("Your Akan name is" +maleNames[dayOfTheWeek]+ ".");
     break;
-        case
+        case "female":
+            var dayOfTheWeek= (yearcode + mm(monthCode) + cc(centurycode) + date )% 7;
+            alert("Your Akan name is" +femaleNames[dayOfTheWeek]+ ".");
+    }
+
+        
+    }
+
+var checkgender = function(){
+    calculate();
+    
+}
+var result = function(){
+    dayOfTheWeek = calculate();
+    checkgender();
 }

@@ -103,8 +103,8 @@ function edoban(){
         }
     }
     
-    
-    var gdr = document.getElementById("one").value;
+    function getGender(dayOfTheWeek){
+        var gdr = document.getElementById("gender").value;
      //Try get document by name.same name for each gender
     if(gdr[0].checked == true){
         if( calculate(dayOfTheWeek)==0){
@@ -130,16 +130,16 @@ function edoban(){
         }
     }
     else if(gdr[1].checked == true ){
-        if(dayOfTheWeek==0){
+        if(calculate(dayOfTheWeek)==0){
             console.log("Your name is Akasua");
         }
-        else if(dayOfTheWeek ==1){
+        else if(calculate(dayOfTheWeek) ==1){
             console.log("Your name is Adwa");
         }
-        else if(dayOfTheWeek ==2){
+        else if(calculate(dayOfTheWeek) ==2){
             console.log("Your name is Abenna");
         }
-        else if(dayOfTheWeek == 3){
+        else if(calculate(dayOfTheWeek) == 3){
             console.log("Your name is Akua");
         }
         else if(dayOfTheWeek == 4){
@@ -155,3 +155,5 @@ function edoban(){
     else {
         alert("Input gender");
     }
+    }
+    

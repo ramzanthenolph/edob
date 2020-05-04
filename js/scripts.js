@@ -1,8 +1,3 @@
-function edoban(){
-    
-    
-}
-
     function mm(){
         var month = parseInt(document.getElementById("month").value);
         var arrayMonth = [0,3,3,6,1,4,6,2,5,0,3,5];
@@ -87,39 +82,45 @@ function edoban(){
             return centurycode;
         }
     }
-     function calculate (date, yearcode, monthCode, centurycode, year){
 
+    
+     function calculate (date, yearcode, monthCode, centurycode, year){
         var date = parseInt(document.getElementById("date").value);
         var year = parseInt(document.getElementById("year").value);
         var yearcode = (year + (year/4))% 7;
         yearcode = Math.trunc(yearcode);
-        if(year % 4 ==0){
-            var dayOfTheWeek= (yearcode + mm(monthCode) + cc(centurycode) + date - 1) % 7;
+
+        if(year % 4 == 0){
+            var dayOfTheWeek = (yearcode + mm(monthCode) + cc(centurycode) + date - 1) % 7;
             return dayOfTheWeek;
+            
         }
-        else{
+        else if(year % 4!= 0){
             dayOfTheWeek= (yearcode + mm(monthCode) + cc(centurycode) + date )% 7;
-            return dayOfTheWeek;
+            return dayOfTheWeek
         }
+        else{}
     }
-    
-    function getGender(){
-        var gdr = document.getElementById("gender").value;
-     //Try get document by name.same name for each gender
+
+var checkgender = function(){
+    calculate();
+    var gdr = document.getElementsByName("one").value;
+    var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+    var femaleNames = ["Akasua", "Adwa", "Abenna", "Akua", "Yaa", "Afua", "Ama"];
+
     if(gdr[0].checked == true){
-        var gen= 0;
-        return gen;
-        
-    }
-    else if(gdr[1].checked == true ){
-        gen = 1;
-        return gen;
+        gender = "male";
+    }else if(gdr[1].checked == true ){
+        gender = "female";
     }
     else {
         alert("Input gender");
     }
+
+    switch(gender){
+        case "male":
+            console.log("Your Akan name is" +maleNames[dayOfTheWeek]);
     }
-    function akanNames(dayOfTheWeek, gen){
-        var maleNames = ["Kwasi", "Kwadwo", ""]
-    }
-    
+    break;
+        case
+}

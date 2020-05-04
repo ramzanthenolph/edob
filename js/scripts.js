@@ -124,12 +124,3 @@
 
         
     }
-
-var checkgender = function(){
-    calculate();
-    
-}
-var result = function(){
-    dayOfTheWeek = calculate();
-    checkgender();
-}
